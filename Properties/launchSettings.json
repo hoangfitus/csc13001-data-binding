@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "csc13001-data-binding (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "csc13001-data-binding (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
