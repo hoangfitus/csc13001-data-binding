@@ -2,8 +2,9 @@
 
 namespace csc13001_data_binding.Model;
 
-public class Phone : INotifyPropertyChanged
+public partial class Phone : INotifyPropertyChanged
 {
+    public int Id { get; set; }
     public string Name { get; set; }
     public string Manufacturer { get; set; }
     public string Image { get; set; }

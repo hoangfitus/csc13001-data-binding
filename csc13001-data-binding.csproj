@@ -39,12 +39,9 @@
     <ProjectCapability Include="Msix" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Fody" Version="6.9.2">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
     <PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.26100.1742" />
     <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.6.250228001" />
+    <PackageReference Include="PropertyChanged.Fody" Version="4.1.0" />
   </ItemGroup>
   <ItemGroup>
     <Page Update="View\PhonePage.xaml">
@@ -68,4 +65,10 @@
     <PublishTrimmed Condition="'$(Configuration)' == 'Debug'">False</PublishTrimmed>
     <PublishTrimmed Condition="'$(Configuration)' != 'Debug'">True</PublishTrimmed>
   </PropertyGroup>
+  <ItemGroup>
+    <EditorConfigFiles Remove="C:\Users\Admin\OneDrive - VNU-HCMUS\College\Year 3\Sem2\Windows Prog\csc13001-data-binding\.editorconfig" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\Admin\OneDrive - VNU-HCMUS\College\Year 3\Sem2\Windows Prog\csc13001-data-binding\.editorconfig" />
+  </ItemGroup>
 </Project>

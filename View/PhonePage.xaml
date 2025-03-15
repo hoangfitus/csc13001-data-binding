@@ -6,10 +6,90 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="using:csc13001_data_binding.View"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:model="using:csc13001_data_binding.Model"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
     mc:Ignorable="d">
-
-    <Grid>
-        <TextBlock>Phone</TextBlock>
+    <Page.Resources>
+        <DataTemplate x:Key="GridViewTemplate" x:DataType="model:Phone">
+            <Grid>
+                <Image
+                    Width="150"
+                    Height="150"
+                    Source="{x:Bind Image}"
+                    Stretch="UniformToFill" />
+                <StackPanel
+                    Padding="5,1,5,1"
+                    VerticalAlignment="Bottom"
+                    Background="LightGray"
+                    Opacity=".9"
+                    Orientation="Vertical">
+                    <TextBlock
+                        FontWeight="Bold"
+                        Text="{x:Bind Name}"
+                        TextWrapping="WrapWholeWords" />
+                    <TextBlock Foreground="{ThemeResource SystemControlPageTextBaseMediumBrush}" Style="{ThemeResource CaptionTextBlockStyle}">
+                        <Run Text="{x:Bind Manufacturer}" />
+                        <Run Text=" - " />
+                        <Run Text="{x:Bind Price}" />
+                    </TextBlock>
+                </StackPanel>
+            </Grid>
+        </DataTemplate>
+    </Page.Resources>
+    <Grid
+        HorizontalAlignment="Center"
+        VerticalAlignment="Center"
+        RowSpacing="40">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="100" />
+        </Grid.RowDefinitions>
+        <GridView
+            x:Name="phonesGridView"
+            Grid.Row="0"
+            Header="Phones:"
+            IsItemClickEnabled="True"
+            ItemClick="phonesGridView_ItemClick"
+            ItemTemplate="{StaticResource GridViewTemplate}"
+            ItemsSource="{x:Bind ViewModel.Phones}"
+            SelectionMode="Single" />
+        <StackPanel Grid.Row="1" HorizontalAlignment="Center">
+            <TextBlock
+                Name="errorMessage"
+                FontWeight="Bold"
+                Foreground="Red"
+                Text="You need to pick a phone first!"
+                TextAlignment="Center"
+                Visibility="Collapsed" />
+            <TextBlock
+                Name="errorUpdateMessage"
+                FontWeight="Bold"
+                Foreground="Red"
+                TextAlignment="Center"
+                Visibility="Collapsed" />
+            <StackPanel Orientation="Horizontal">
+                <Button
+                    Name="addPhoneButton"
+                    Width="80"
+                    Height="35"
+                    Click="addPhoneButton_Click"
+                    Content="Add"
+                    Foreground="Blue" />
+                <Button
+                    Name="deletePhoneButton"
+                    Width="80"
+                    Height="35"
+                    Click="deletePhoneButton_Click"
+                    Content="Delete"
+                    Foreground="Red" />
+                <Button
+                    Name="updatePhoneButton"
+                    Width="80"
+                    Height="35"
+                    Click="updatePhoneButton_Click"
+                    Content="Update"
+                    Foreground="Purple" />
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </Page>

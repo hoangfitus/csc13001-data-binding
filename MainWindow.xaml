@@ -6,5 +6,5 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="using:csc13001_data_binding"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    Title="csc13001-data-binding"
+    Title="Phone"
     mc:Ignorable="d" />
