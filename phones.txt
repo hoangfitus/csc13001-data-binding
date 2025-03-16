@@ -1,0 +1,22 @@
+iphone 16e 128GB, Apple,16490000,IPhone16e.png
+Samsung Galaxy S25 Ultra, Samsung,29990000,sss25.png
+Xiaomi 15 5G 12GB 56GB, Xiaomi,21990000,xiaomi15.png
+Samsung Galaxy Z Fold 6, Samsung,35090000,sszfold6.png
+Iphone 16 Pro MAX 256GB, Apple,31290000,ip16pm.png
+Samsung Galaxy A15 LTE, Samsung,4290000,ssa15.png
+Xiaomi 14T Pro, Xiaomi,14490000,Xiaomi14T.png
+Samsung Galaxy S24 Ultra, Samsung,22990000,sss24.png
+iphone 13 128GB, Apple,11890000,ip13.png
+Iphone 15 Plus 128GB, Apple,19390000,ip15plus.png
+Iphone 14 Pro 128GB, Apple,22990000,ip14pro.png
+Iphone 11 128GB, Apple,10490000,ip11.png
+Samsung Galaxy A55 5G, Samsung,8790000,ssa55.png
+OPPO Find X8, Oppo,21990000,oppoa3.png
+Oppo Reno12 F 5G, Oppo,7490000,opporeno12.png
+Oppo A3, Oppo,4590000,oppoa3.png
+Oppo A38, Oppo,3990000,oppoa38.png
+vivo V25e, vivo,5290000,vivov25e.png
+vivo Y100,  vivo,6490000,vivoy100.png
+vivo Y03t, vivo,2990000,vivoy03t.png
+Tecno Camon 30S, Tecno,4990000,tecno.png
+Nokia HMD 105, Nokia,650000,nokia.png
