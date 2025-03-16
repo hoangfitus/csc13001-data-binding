@@ -11,9 +11,9 @@ namespace csc13001_data_binding.Service
         {
             private readonly List<Phone> _phones;
 
-            public IEnumerable<Phone> GetAll()
+            public MockPhoneRepository()
             {
-                return new List<Phone>
+                _phones = new List<Phone>
                 {
                     new Phone { Id = 1, Name = "Iphone 13", Manufacturer = "Apple", Price = 199.99m, Image = "/Assets/iphone13.png" },
                     new Phone { Id = 2, Name = "Iphone 13 Pro", Manufacturer = "Apple", Price = 249.99m, Image = "/Assets/iphone13pro.png" },
@@ -21,6 +21,11 @@ namespace csc13001_data_binding.Service
                     new Phone { Id = 4, Name = "Samsung Galaxy S20", Manufacturer = "Samsung", Price = 239.99m, Image = "/Assets/samsunggalaxys20.png" },
                     new Phone { Id = 5, Name = "Samsung Galaxy ZFlip", Manufacturer = "Samsung", Price = 339.99m, Image = "/Assets/samsunggalaxyzflip.png" },
                 };
+            }
+
+            public IEnumerable<Phone> GetAll()
+            {
+                return _phones;
             }
 
             public Phone AddPhone(Phone phone)
@@ -53,20 +58,23 @@ namespace csc13001_data_binding.Service
             }
         }
 
-        public IPhoneRepository Phones { get; set; } = new MockPhoneRepository();
+        public IPhoneRepository Phones { get; } = new MockPhoneRepository();
 
         public IEnumerable<Phone> GetAll()
         {
             return Phones.GetAll();
         }
+
         public Phone AddPhone(Phone phone)
         {
             return Phones.AddPhone(phone);
         }
+
         public Phone UpdatePhone(Phone phone)
         {
             return Phones.UpdatePhone(phone);
         }
+
         public void DeletePhone(int id)
         {
             Phones.DeletePhone(id);
