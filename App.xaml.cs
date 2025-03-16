@@ -19,7 +19,7 @@ namespace csc13001_data_binding
         public App()
         {
             this.InitializeComponent();
-            Services.AddSingleton<IPhoneDao, PhoneMockDao>();
+            Services.AddSingleton<IPhoneDao, PhoneTextDao>();
             Services.AddSingleton<IPhoneRepository, PhoneRepository>();
         }
 
